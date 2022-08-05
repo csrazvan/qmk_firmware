@@ -38,11 +38,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LShift|   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+ * |LShift|   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |RShift|
  * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
  * |LCTRL |   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  | Del  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   |LGUI  | Alt  | SGN  | Space /       \Enter \  |NAV | BSPC | RGUI |
+ *                   |LGUI  | Alt  | SGN  | / Space /       \Enter \  | NAV  | BSPC | RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `-------------------''-------'           '------''--------------------'
  */
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_QWERTY] = LAYOUT(
   KC_ESC,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_EQL,
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS,
-  KC_LSFT,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+  KC_LSFT,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_RSFT,
   KC_LCTRL, KC_Z,   KC_X,    KC_C,    KC_V,    KC_B, KC_LBRC,  KC_RBRC,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_DEL,
                       KC_LGUI, KC_LALT,SGN, KC_SPC,   KC_ENT,   NAV, KC_BSPC,  KC_RGUI
 ),
@@ -60,11 +60,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LShift|   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+ * |LShift|   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |RShift|
  * |------+------+------+------+------+------|  ESC  |    |QWERTY |------+------+------+------+------+------|
  * |LCTRL |   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  | Del  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   |LGUI  | Alt  | SGN  | Space /       \Enter \  |NAV | BSPC | RGUI |
+ *                   |LGUI  | Alt  | SGN  | / Space /       \Enter \  |NAV   | BSPC | RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `-------------------''-------'           '------''--------------------'
  */
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_POE] = LAYOUT(
   KC_GRAVE, KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_EQL,
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS,
-  KC_LSFT,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+  KC_LSFT,  KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_RSFT,
   KC_LCTRL, KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,  KC_ESC,  QWERTY,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_DEL,
                               KC_LGUI, KC_LALT,SGN,   KC_SPC,  KC_ENT,   NAV, KC_BSPC,  KC_RGUI
   ),
@@ -80,20 +80,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |   !  |   @  |   #  |   $  |   %  |                    |   ^  |   &  |   *  |   (  |   )  |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |   |  |   [  |   ]  |   ~  |                    |      |   "  |   _  |   +  |      |      |
+ * |      |      |   |  |   [  |   ]  |   ~  |                    |      |   "  |   -  |   +  |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      |   \  |   (  |   )  |   `  |-------.    ,-------|      |   '  |   _  |   =  |   :  |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      |      |      |   {  |   }  |      |-------|    |-------|      |      |   <  |   >  |   ?  |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   |SGN | LGUI | Alt  | /Space  /       \Enter \  |BackSP| RGUI |NAV |
- *                   |      |      |      |/       /         \      \ |      |      |      |
+ *                   |SGN | LGUI | Alt  |   / Space /       \Enter \  |BackSP| RGUI |  NAV |
+ *                   |    |      |      | /       /          \      \ |      |      |      |
  *                   `-------------------''-------'           '------''--------------------'
  */
 [_SGN] = LAYOUT(
   _______, KC_EXLM, KC_AT,     KC_HASH, KC_DLR,  KC_PERC,                    KC_CIRC, KC_AMPR,  KC_ASTR,       KC_LPRN,  KC_RPRN, _______,
-  _______, _______, KC_PIPE,   KC_LBRC, KC_RBRC, KC_TILDE,                   _______, KC_DQUO,  KC_UNDERSCORE, KC_PLUS,  _______, _______,
-  _______, _______, KC_BSLASH, KC_LPRN, KC_RPRN, KC_GRAVE,                   _______, KC_QUOTE, KC_MINUS,      KC_EQUAL, KC_COLN, _______,
+  _______, _______, KC_PIPE,   KC_LBRC, KC_RBRC, KC_TILDE,                   _______, KC_DQUO,  KC_MINUS,      KC_PLUS,  _______, _______,
+  _______, _______, KC_BSLASH, KC_LPRN, KC_RPRN, KC_GRAVE,                   _______, KC_QUOTE, KC_UNDERSCORE, KC_EQUAL, KC_COLN, _______,
   _______, _______, _______,   KC_LCBR, KC_RCBR, _______, _______, _______,  _______, _______,  KC_LABK,       KC_RABK,  KC_QUES, _______,
                                _______, _______, _______, _______, _______,  _______, _______,  _______
 ),
@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
  * |      |      |      |      |      |      |-------|    |-------|      |      | End  |PgDwn |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   |SGN | LGUI | Alt  | /Space  /       \Enter \  |BackSP| RGUI |NAV |
+ *                   |SGN | LGUI | Alt  |   /Space  /       \Enter \  |BackSP| RGUI |NAV |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `-------------------''-------'           '------''--------------------'
  */
@@ -130,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|  POE  |    | QWERTY|------+------+------+------+------+------|
  * |      |      |  LL  |   D  |  LR  |      |-------|    |-------|VOL_DN| PREV | NEXT |      |      | LOCK |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   |SGN | LGUI | Alt  | /Space  /       \Enter \  |BackSP| RGUI |NAV |
+ *                   |  SGN | LGUI | Alt  | /Space  /       \Enter \  |BackSP| RGUI |  NAV |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
