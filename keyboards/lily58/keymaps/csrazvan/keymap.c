@@ -138,9 +138,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [_DUO] = LAYOUT(
   XXXXXXX, XXXXXXX,      XXXXXXX,       XXXXXXX,        XXXXXXX,        XXXXXXX,                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,
-  XXXXXXX, XXXXXXX,      MEH(KC_LEFT),  LCAG(KC_UP),    MEH(KC_UP),     XXXXXXX,                           KC_VOLD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, EE_CLR,
+  XXXXXXX, XXXXXXX,      MEH(KC_LEFT),  LCAG(KC_UP),    MEH(KC_UP),     XXXXXXX,                           KC_VOLU, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, EE_CLR,
   XXXXXXX, LCA(KC_LEFT), LCAG(KC_LEFT), LCAG(KC_M),     LCAG(KC_RIGHT), LCA(KC_RIGHT),                     KC_MUTE, KC_MPLY, KC_MSTP, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX,      MEH(KC_DOWN),  LCAG(KC_DOWN),  MEH(KC_RIGHT),  XXXXXXX,         POE, QWERTY,      KC_VOLU, KC_MPRV, KC_MNXT, XXXXXXX, XXXXXXX, LCTL(LGUI(KC_Q)),
+  XXXXXXX, XXXXXXX,      MEH(KC_DOWN),  LCAG(KC_DOWN),  MEH(KC_RIGHT),  XXXXXXX,         POE, QWERTY,      KC_VOLD, KC_MPRV, KC_MNXT, XXXXXXX, XXXXXXX, LCTL(LGUI(KC_Q)),
                                                             _______, _______, _______, _______, _______,  _______, _______, _______
   ),
 };
